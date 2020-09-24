@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		043FC640251C5FC8008235D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043FC63F251C5FC8008235D7 /* Assets.xcassets */; };
 		043FC643251C5FC8008235D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043FC641251C5FC8008235D7 /* LaunchScreen.storyboard */; };
 		043FC646251C5FC8008235D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC645251C5FC8008235D7 /* main.m */; };
+		043FC660251C6B51008235D7 /* MRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC65F251C6B51008235D7 /* MRCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		043FC66B251C7336008235D7 /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC66A251C7336008235D7 /* ARCViewController.m */; };
+		043FC671251C93DE008235D7 /* SingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC670251C93DE008235D7 /* SingletonViewController.m */; };
+		043FC676251C9573008235D7 /* SingletonARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC675251C9573008235D7 /* SingletonARC.m */; };
+		043FC67C251CA343008235D7 /* SingletonAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC67B251CA343008235D7 /* SingletonAll.m */; };
 		6C409C6E2C72B462ECF2897B /* Pods_ios_notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A68EE1DD9E624225146975 /* Pods_ios_notes.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,18 @@
 		043FC642251C5FC8008235D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043FC644251C5FC8008235D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043FC645251C5FC8008235D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		043FC65A251C678D008235D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		043FC65E251C6B51008235D7 /* MRCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCViewController.h; sourceTree = "<group>"; };
+		043FC65F251C6B51008235D7 /* MRCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRCViewController.m; sourceTree = "<group>"; };
+		043FC669251C7336008235D7 /* ARCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCViewController.h; sourceTree = "<group>"; };
+		043FC66A251C7336008235D7 /* ARCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
+		043FC66F251C93DE008235D7 /* SingletonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonViewController.h; sourceTree = "<group>"; };
+		043FC670251C93DE008235D7 /* SingletonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonViewController.m; sourceTree = "<group>"; };
+		043FC674251C9573008235D7 /* SingletonARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonARC.h; sourceTree = "<group>"; };
+		043FC675251C9573008235D7 /* SingletonARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonARC.m; sourceTree = "<group>"; };
+		043FC678251CA137008235D7 /* SingletonPH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonPH.pch; sourceTree = "<group>"; };
+		043FC67A251CA343008235D7 /* SingletonAll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonAll.h; sourceTree = "<group>"; };
+		043FC67B251CA343008235D7 /* SingletonAll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonAll.m; sourceTree = "<group>"; };
 		5D41ECB2472B8DD0040709C7 /* Pods-ios-notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-notes.debug.xcconfig"; path = "Target Support Files/Pods-ios-notes/Pods-ios-notes.debug.xcconfig"; sourceTree = "<group>"; };
 		BA15C1B381C41C7F93A75E95 /* Pods-ios-notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-notes.release.xcconfig"; path = "Target Support Files/Pods-ios-notes/Pods-ios-notes.release.xcconfig"; sourceTree = "<group>"; };
 		C9A68EE1DD9E624225146975 /* Pods_ios_notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				043FC64E251C6054008235D7 /* SupportFiles */,
+				043FC659251C6774008235D7 /* Define */,
+				043FC65C251C6AF8008235D7 /* Model */,
 			);
 			path = "ios-notes";
 			sourceTree = "<group>";
@@ -73,8 +92,6 @@
 			children = (
 				043FC633251C5FC4008235D7 /* AppDelegate.h */,
 				043FC634251C5FC4008235D7 /* AppDelegate.m */,
-				043FC639251C5FC4008235D7 /* ViewController.h */,
-				043FC63A251C5FC4008235D7 /* ViewController.m */,
 				043FC63F251C5FC8008235D7 /* Assets.xcassets */,
 				043FC641251C5FC8008235D7 /* LaunchScreen.storyboard */,
 				043FC644251C5FC8008235D7 /* Info.plist */,
@@ -83,13 +100,56 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		043FC659251C6774008235D7 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				043FC65A251C678D008235D7 /* PrefixHeader.pch */,
+				043FC678251CA137008235D7 /* SingletonPH.pch */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		043FC65C251C6AF8008235D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				043FC66E251C93AB008235D7 /* Singleton */,
+				043FC65D251C6B25008235D7 /* MRC-ARC */,
+				043FC639251C5FC4008235D7 /* ViewController.h */,
+				043FC63A251C5FC4008235D7 /* ViewController.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		043FC65D251C6B25008235D7 /* MRC-ARC */ = {
+			isa = PBXGroup;
+			children = (
+				043FC65E251C6B51008235D7 /* MRCViewController.h */,
+				043FC65F251C6B51008235D7 /* MRCViewController.m */,
+				043FC669251C7336008235D7 /* ARCViewController.h */,
+				043FC66A251C7336008235D7 /* ARCViewController.m */,
+			);
+			path = "MRC-ARC";
+			sourceTree = "<group>";
+		};
+		043FC66E251C93AB008235D7 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				043FC66F251C93DE008235D7 /* SingletonViewController.h */,
+				043FC670251C93DE008235D7 /* SingletonViewController.m */,
+				043FC674251C9573008235D7 /* SingletonARC.h */,
+				043FC675251C9573008235D7 /* SingletonARC.m */,
+				043FC67A251CA343008235D7 /* SingletonAll.h */,
+				043FC67B251CA343008235D7 /* SingletonAll.m */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 		17B18B4C1766E2663E8CB03C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5D41ECB2472B8DD0040709C7 /* Pods-ios-notes.debug.xcconfig */,
 				BA15C1B381C41C7F93A75E95 /* Pods-ios-notes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043FC671251C93DE008235D7 /* SingletonViewController.m in Sources */,
+				043FC676251C9573008235D7 /* SingletonARC.m in Sources */,
 				043FC63B251C5FC4008235D7 /* ViewController.m in Sources */,
 				043FC635251C5FC4008235D7 /* AppDelegate.m in Sources */,
 				043FC646251C5FC8008235D7 /* main.m in Sources */,
+				043FC67C251CA343008235D7 /* SingletonAll.m in Sources */,
+				043FC660251C6B51008235D7 /* MRCViewController.m in Sources */,
+				043FC66B251C7336008235D7 /* ARCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2WUZ4595W7;
+				GCC_PREFIX_HEADER = "ios-notes/Define/PrefixHeader.pch";
 				INFOPLIST_FILE = "ios-notes/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,6 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2WUZ4595W7;
+				GCC_PREFIX_HEADER = "ios-notes/Define/PrefixHeader.pch";
 				INFOPLIST_FILE = "ios-notes/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
