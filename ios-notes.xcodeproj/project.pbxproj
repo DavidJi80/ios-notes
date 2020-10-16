@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040467362536D43800082968 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040467352536D43800082968 /* PropertyViewController.m */; };
 		043FC635251C5FC4008235D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC634251C5FC4008235D7 /* AppDelegate.m */; };
 		043FC63B251C5FC4008235D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC63A251C5FC4008235D7 /* ViewController.m */; };
 		043FC640251C5FC8008235D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043FC63F251C5FC8008235D7 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040467342536D43800082968 /* PropertyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyViewController.h; sourceTree = "<group>"; };
+		040467352536D43800082968 /* PropertyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyViewController.m; sourceTree = "<group>"; };
 		043FC630251C5FC4008235D7 /* ios-notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		043FC633251C5FC4008235D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		043FC634251C5FC4008235D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040467332536D3B800082968 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				040467342536D43800082968 /* PropertyViewController.h */,
+				040467352536D43800082968 /* PropertyViewController.m */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
 		043FC627251C5FC4008235D7 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +124,9 @@
 		043FC65C251C6AF8008235D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				043FC66E251C93AB008235D7 /* Singleton */,
 				043FC65D251C6B25008235D7 /* MRC-ARC */,
+				040467332536D3B800082968 /* Property */,
+				043FC66E251C93AB008235D7 /* Singleton */,
 				043FC639251C5FC4008235D7 /* ViewController.h */,
 				043FC63A251C5FC4008235D7 /* ViewController.m */,
 			);
@@ -280,6 +293,7 @@
 				043FC646251C5FC8008235D7 /* main.m in Sources */,
 				043FC67C251CA343008235D7 /* SingletonAll.m in Sources */,
 				043FC660251C6B51008235D7 /* MRCViewController.m in Sources */,
+				040467362536D43800082968 /* PropertyViewController.m in Sources */,
 				043FC66B251C7336008235D7 /* ARCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
