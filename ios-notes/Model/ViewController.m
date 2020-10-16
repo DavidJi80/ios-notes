@@ -10,6 +10,7 @@
 #import "ARCViewController.h"
 #import "SingletonViewController.h"
 #import "PropertyViewController.h"
+#import "BlockViewController.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) UIButton *propBtn;
 @property (strong, nonatomic) UIButton *singletonBtn;
 @property (strong, nonatomic) UIButton *bridgBtn;
+@property (strong, nonatomic) UIButton *weakStrongBtn;
 
 @end
 
@@ -67,6 +69,14 @@
         make.top.equalTo(self.singletonBtn);
         make.left.equalTo(self.singletonBtn.right).offset(10);
         make.width.equalTo(100);
+        make.height.equalTo(40);
+    }];
+    
+    [self.view addSubview:self.weakStrongBtn];
+    [self.weakStrongBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.singletonBtn.bottom).offset(10);
+        make.left.equalTo(self.mrcBtn);
+        make.width.equalTo(150);
         make.height.equalTo(40);
     }];
 
@@ -130,6 +140,17 @@
     return _bridgBtn;
 }
 
+- (UIButton *)weakStrongBtn{
+    if (!_weakStrongBtn) {
+        UIButton *button = [[UIButton alloc]init];
+        [button setTitle:@"__weak __strong" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(blockDemo) forControlEvents:UIControlEventTouchUpInside];
+        button.backgroundColor=UIColor.brownColor;
+        _weakStrongBtn = button;
+    }
+    return _weakStrongBtn;
+}
+
 #pragma mark - Action
 //MRC
 -(void)mrcDemo{
@@ -189,6 +210,12 @@
     NSLog(@"Foundation对象：%@，地址：%p",d2NSString,&d2NSString);
     NSLog(@"Core Foundation对象：%@，地址：%p",dCFString,&dCFString);
     
+}
+
+-(void)blockDemo{
+    BlockViewController *vc=[BlockViewController new];
+    printf("Retain Count = %ld\n",CFGetRetainCount((__bridge CFTypeRef)(vc)));
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
