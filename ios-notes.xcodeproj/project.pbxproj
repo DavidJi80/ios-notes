@@ -19,6 +19,7 @@
 		043FC676251C9573008235D7 /* SingletonARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC675251C9573008235D7 /* SingletonARC.m */; };
 		043FC67C251CA343008235D7 /* SingletonAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FC67B251CA343008235D7 /* SingletonAll.m */; };
 		04C55B4825399B1100C672B2 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55B4725399B1100C672B2 /* BlockViewController.m */; };
+		04EA8AE0253B39400088AA78 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA8ADF253B393F0088AA78 /* Person.m */; };
 		6C409C6E2C72B462ECF2897B /* Pods_ios_notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A68EE1DD9E624225146975 /* Pods_ios_notes.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		043FC67B251CA343008235D7 /* SingletonAll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonAll.m; sourceTree = "<group>"; };
 		04C55B4625399B1100C672B2 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
 		04C55B4725399B1100C672B2 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		04EA8ADE253B393F0088AA78 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		04EA8ADF253B393F0088AA78 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		5D41ECB2472B8DD0040709C7 /* Pods-ios-notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-notes.debug.xcconfig"; path = "Target Support Files/Pods-ios-notes/Pods-ios-notes.debug.xcconfig"; sourceTree = "<group>"; };
 		BA15C1B381C41C7F93A75E95 /* Pods-ios-notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-notes.release.xcconfig"; path = "Target Support Files/Pods-ios-notes/Pods-ios-notes.release.xcconfig"; sourceTree = "<group>"; };
 		C9A68EE1DD9E624225146975 /* Pods_ios_notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,10 +130,10 @@
 		043FC65C251C6AF8008235D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04C55B4425399AB300C672B2 /* WeakStrong */,
 				043FC65D251C6B25008235D7 /* MRC-ARC */,
 				040467332536D3B800082968 /* Property */,
 				043FC66E251C93AB008235D7 /* Singleton */,
+				04C55B4425399AB300C672B2 /* Block */,
 				043FC639251C5FC4008235D7 /* ViewController.h */,
 				043FC63A251C5FC4008235D7 /* ViewController.m */,
 			);
@@ -161,13 +164,15 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
-		04C55B4425399AB300C672B2 /* WeakStrong */ = {
+		04C55B4425399AB300C672B2 /* Block */ = {
 			isa = PBXGroup;
 			children = (
 				04C55B4625399B1100C672B2 /* BlockViewController.h */,
 				04C55B4725399B1100C672B2 /* BlockViewController.m */,
+				04EA8ADE253B393F0088AA78 /* Person.h */,
+				04EA8ADF253B393F0088AA78 /* Person.m */,
 			);
-			path = WeakStrong;
+			path = Block;
 			sourceTree = "<group>";
 		};
 		17B18B4C1766E2663E8CB03C /* Pods */ = {
@@ -301,6 +306,7 @@
 			files = (
 				043FC671251C93DE008235D7 /* SingletonViewController.m in Sources */,
 				043FC676251C9573008235D7 /* SingletonARC.m in Sources */,
+				04EA8AE0253B39400088AA78 /* Person.m in Sources */,
 				043FC63B251C5FC4008235D7 /* ViewController.m in Sources */,
 				043FC635251C5FC4008235D7 /* AppDelegate.m in Sources */,
 				043FC646251C5FC8008235D7 /* main.m in Sources */,
@@ -445,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WUZ4595W7;
+				DEVELOPMENT_TEAM = Y5JAPXR9CH;
 				GCC_PREFIX_HEADER = "ios-notes/Define/PrefixHeader.pch";
 				INFOPLIST_FILE = "ios-notes/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,7 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WUZ4595W7;
+				DEVELOPMENT_TEAM = Y5JAPXR9CH;
 				GCC_PREFIX_HEADER = "ios-notes/Define/PrefixHeader.pch";
 				INFOPLIST_FILE = "ios-notes/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

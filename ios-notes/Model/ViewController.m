@@ -19,7 +19,7 @@
 @property (strong, nonatomic) UIButton *propBtn;
 @property (strong, nonatomic) UIButton *singletonBtn;
 @property (strong, nonatomic) UIButton *bridgBtn;
-@property (strong, nonatomic) UIButton *weakStrongBtn;
+@property (strong, nonatomic) UIButton *blockBtn;
 
 @end
 
@@ -72,11 +72,11 @@
         make.height.equalTo(40);
     }];
     
-    [self.view addSubview:self.weakStrongBtn];
-    [self.weakStrongBtn makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.singletonBtn.bottom).offset(10);
-        make.left.equalTo(self.mrcBtn);
-        make.width.equalTo(150);
+    [self.view addSubview:self.blockBtn];
+    [self.blockBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.singletonBtn);
+        make.left.equalTo(self.bridgBtn.right).offset(10);
+        make.width.equalTo(100);
         make.height.equalTo(40);
     }];
 
@@ -140,15 +140,15 @@
     return _bridgBtn;
 }
 
-- (UIButton *)weakStrongBtn{
-    if (!_weakStrongBtn) {
+- (UIButton *)blockBtn{
+    if (!_blockBtn) {
         UIButton *button = [[UIButton alloc]init];
-        [button setTitle:@"__weak __strong" forState:UIControlStateNormal];
+        [button setTitle:@"Block" forState:UIControlStateNormal];
         [button addTarget:self action:@selector(blockDemo) forControlEvents:UIControlEventTouchUpInside];
         button.backgroundColor=UIColor.brownColor;
-        _weakStrongBtn = button;
+        _blockBtn = button;
     }
-    return _weakStrongBtn;
+    return _blockBtn;
 }
 
 #pragma mark - Action
