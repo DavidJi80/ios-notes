@@ -20,6 +20,7 @@ static int static_global_variate=50;    //全局静态变量
 @property (strong, nonatomic) UIButton *variateBlockBtn;
 @property (strong, nonatomic) UIButton *storeBlockBtn;
 @property (strong, nonatomic) UIButton *weakBlockBtn;
+@property (strong, nonatomic) UIButton *nestedBlockBtn;
 
 @end
 
@@ -64,6 +65,15 @@ static int static_global_variate=50;    //全局静态变量
         make.right.equalTo(self.view).offset(-10);
         make.height.equalTo(40);
     }];
+    
+    [self.view addSubview:self.nestedBlockBtn];
+    [self.nestedBlockBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.weakBlockBtn.bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(40);
+    }];
+    
 }
 
 #pragma mark - Lazy Init
@@ -115,6 +125,19 @@ static int static_global_variate=50;    //全局静态变量
     }
     return _weakBlockBtn;
 }
+
+- (UIButton *)nestedBlockBtn{
+    if (!_nestedBlockBtn) {
+        UIButton *button = [[UIButton alloc]init];
+        [button setBackgroundImage:nil forState:UIControlStateNormal];
+        [button setTitle:@"Block循环引用__strong" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(nestedBlock) forControlEvents:UIControlEventTouchUpInside];
+        button.backgroundColor=UIColor.brownColor;
+        _nestedBlockBtn = button;
+    }
+    return _nestedBlockBtn;
+}
+
 
 #pragma mark - Action
 //Block 可以定义在方法外部
@@ -247,6 +270,18 @@ void blockAndVariate(int local_variate)//函数参数
     person.block();
 }
 
+-(void)nestedBlock{
+    Person *person = [[Person alloc] init];
+    person.age=18;
+    __weak typeof(person) weakPerson = person;
+    person.block = ^{
+        __strong typeof(person) strongPerson = weakPerson;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"age is %d", strongPerson.age);
+        });
+    };
+    person.block();
+}
 
 
 @end
